@@ -28,6 +28,13 @@ module.exports = {
         test: /\.(css|scss)$/,
         loader: "style-loader!css-loader?sourceMaps!postcss-loader?sourceMaps",
       },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        loader: "url",
+        query: {
+          limit: 100000,
+        },
+      },
     ],
   },
 
